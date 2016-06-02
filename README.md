@@ -103,3 +103,8 @@ VALUES
 
 
 ```
+	ENVIAR JSON DESDE EL CONTROLADOR
+```php
+        $data=$this->Usuario->getAll();
+        echo json_encode($data);
+        ```
