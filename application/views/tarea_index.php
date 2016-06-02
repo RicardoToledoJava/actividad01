@@ -40,7 +40,17 @@
         </nav>
 
         <div class="container">
-
+            <br><br><br>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre de Tarea</label>
+                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre Tarea">
+                </div>
+               
+                
+               
+                <button type="submit" class="btn btn-default">Asignar Actividad</button>
+            </form>
 
 
         </div><!-- /.container -->
@@ -52,9 +62,9 @@
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
         <script>
-            
-            
-            
+
+
+
         </script>
     </body>
 </html>
