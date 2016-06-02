@@ -115,4 +115,15 @@ VALUES
 	-----------
         $data=$this->Usuario->getAll();
         echo json_encode($data);
-        ```
+```
+
+	ENVIAR DATOS GET/POST JQUERY http://www.w3schools.com/jquery/jquery_ajax_get_post.asp
+	
+```javascript
+   $("button").click(function(){
+     $.get("demo_test.asp", function(data, status){
+          alert("Data: " + data + "\nStatus: " + status);
+     });
+   });
+
+```
