@@ -105,6 +105,14 @@ VALUES
 ```
 	ENVIAR JSON DESDE EL CONTROLADOR
 ```php
+	MODEL:
+	$query=$this->db->query("select * from Usuarios");
+        $result=$query->result_object();
+        $this->db->close();
+        return $result;
+
+	CONTROLLER:
+	-----------
         $data=$this->Usuario->getAll();
         echo json_encode($data);
         ```
