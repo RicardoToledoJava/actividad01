@@ -2,7 +2,7 @@
 Actividad Codeigniter
 
   
- ![Image of Yaktocat](actividad01/Captura de pantalla 2016-06-02 16.17.14.png)
+ ![Image of Yaktocat](https://github.com/RicardoToledoJava/actividad01/Captura%20de%20pantalla%202016-06-02%2016.17.14.png)
 
 
 ```sql
