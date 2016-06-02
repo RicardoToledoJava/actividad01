@@ -127,10 +127,3 @@ VALUES
    });
 
 ```
-	RECORRER OBJETOS CON EACH http://www.w3schools.com/jquery/misc_each.asp
-	
-```javascript
-    $(selector).each(function(index,element))
-
-```
-
