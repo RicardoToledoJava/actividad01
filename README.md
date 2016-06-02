@@ -1,6 +1,10 @@
 # actividad01
 Actividad Codeigniter
 
+  
+ ![Image of Yaktocat](actividad01/Captura de pantalla 2016-06-02 16.17.14.png)
+
+
 ```sql
 DROP TABLE IF EXISTS `Responsables`;
 
