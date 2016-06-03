@@ -89,8 +89,18 @@
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
         <script>
-
-
+            $(document).ready(function(){
+              // alert("HOLA FECCI"); 
+               //id #nombredelid
+               //class .nombredelaclass
+               //quiero cambiar el nombre de la caja de texto name
+               $('#nombre').val("FECCI TIENE QUE HACER SU CAMA");
+               $('#nombre').click(function(){
+                   $('#nombre').val("MAMA NO QUIERO");
+               });
+               
+            });
+            
 
         </script>
     </body>
