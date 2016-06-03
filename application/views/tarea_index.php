@@ -54,21 +54,17 @@
                 <div class="form-group">
                     <label for="unidad">Unidades</label>
                     <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <?php foreach($unidad as $uni){ ?>
+                        <option><?php echo $uni->nombre; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="responsable">Responsables</label>
                     <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <?php foreach($responsable as $res){ ?>
+                        <option><?php echo $res->nombre; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 
