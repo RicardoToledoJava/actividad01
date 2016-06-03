@@ -116,6 +116,8 @@ VALUES
         $data=$this->Usuario->getAll();
         echo json_encode($data);
 ```
+        REPASAR JQUERY: http://www.w3schools.com/jquery/
+
 
 	ENVIAR DATOS GET/POST JQUERY http://www.w3schools.com/jquery/jquery_ajax_get_post.asp
 	
