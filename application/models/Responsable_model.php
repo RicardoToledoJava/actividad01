@@ -7,20 +7,20 @@
  */
 
 /**
- * Description of Servicio_model
+ * Description of Responsable_model
  *
  * @author ricardotoledo
  */
-class Servicio_model extends CI_Model{
+class Responsable_model extends CI_Model {
+    //put your code here
     public function __construct() {
         $this->load->database();
     }
-    public function getAll(){
-        $query=$this->db->query("select * from Servicios where estado='activo'");
+     public function getAll(){
+        $query=$this->db->query("select * from Responsables where estado='activo'");
         $result=$query->result_object();
         $this->db->close();
         return $result;
         
     }
-    
 }

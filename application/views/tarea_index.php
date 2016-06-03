@@ -43,12 +43,43 @@
             <br><br><br>
             <form>
                 <div class="form-group">
+                    <label for="servicio">Servicios</label>
+                    <select class="form-control">
+                        <?php foreach($servicio as $servi){ ?>
+                          <option><?php echo $servi->nombre;  ?></option>
+                        <?php } ?>
+                       
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="unidad">Unidades</label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="responsable">Responsables</label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                
+                
+                <div class="form-group">
                     <label for="nombre">Nombre de Tarea</label>
                     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre Tarea">
                 </div>
-               
-                
-               
+
+
+
                 <button type="submit" class="btn btn-default">Asignar Actividad</button>
             </form>
 
