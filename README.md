@@ -17,6 +17,9 @@ CREATE TABLE `Responsables` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
+
+
+
 INSERT INTO `Responsables` (`reponsable_id`, `nombre`, `unidad_id`, `estado`)
 VALUES
 	(1,'JUAN',1,'ACTIVO'),
@@ -129,3 +132,12 @@ VALUES
    });
 
 ```
+
+	CONVERTIR CADENA Y UTILIZAR ARRAYLIST
+```javascript
+	datos = $.parseJSON(data);
+        $.each(datos, function (i, item) {
+                 console.log(item);
+                           
+        });
+                        ```
