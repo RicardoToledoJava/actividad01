@@ -23,4 +23,12 @@ class Unidad_model extends CI_Model {
         return $result;
         
     }
+    
+    public function findbyid($id){
+        $query=$this->db->query("select * from Unidades where servicio_id='".$id."' and estado='activo'");
+        $result=$query->result_object();
+        $this->db->close();
+        return $result;
+        
+    }
 }

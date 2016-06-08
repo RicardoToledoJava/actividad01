@@ -44,31 +44,27 @@
             <form>
                 <div class="form-group">
                     <label for="servicio">Servicios</label>
-                    <select class="form-control">
-                        <?php foreach($servicio as $servi){ ?>
-                          <option><?php echo $servi->nombre;  ?></option>
+                    <select class="form-control" id='servicio' >
+                        <?php foreach ($servicio as $servi) { ?>
+                            <option value=<?php echo $servi->servicio_id; ?>><?php echo $servi->nombre; ?></option>
                         <?php } ?>
-                       
+
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="unidad">Unidades</label>
-                    <select class="form-control">
-                        <?php foreach($unidad as $uni){ ?>
-                        <option><?php echo $uni->nombre; ?></option>
-                        <?php } ?>
+                    <label for="unidad" id=''>Unidades</label>
+                    <select class="form-control" id='unidad'>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="responsable">Responsables</label>
-                    <select class="form-control">
-                        <?php foreach($responsable as $res){ ?>
-                        <option><?php echo $res->nombre; ?></option>
-                        <?php } ?>
+                    <select class="form-control" id='responsable'>
+
                     </select>
                 </div>
-                
-                
+
+
                 <div class="form-group">
                     <label for="nombre">Nombre de Tarea</label>
                     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre Tarea">
@@ -89,18 +85,20 @@
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
         <script>
-            $(document).ready(function(){
-              // alert("HOLA FECCI"); 
-               //id #nombredelid
-               //class .nombredelaclass
-               //quiero cambiar el nombre de la caja de texto name
-               $('#nombre').val("FECCI TIENE QUE HACER SU CAMA");
-               $('#nombre').click(function(){
-                   $('#nombre').val("MAMA NO QUIERO");
-               });
-               
+            $(document).ready(function () {
+                //CUANDO EL SERVICIO CAMBIA
+                $('#servicio').change(function () {
+                    alert($('#servicio').val());
+                    //PIDIENDO JSON
+                   // $.get("Tarea/obtenerUnidades/3", function (data, status) {
+                   //     alert("Data: " + data + "\nStatus: " + status);
+                   // });
+
+
+
+                });
             });
-            
+
 
         </script>
     </body>
