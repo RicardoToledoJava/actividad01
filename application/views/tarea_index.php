@@ -88,10 +88,13 @@
             $(document).ready(function () {
                 //CUANDO EL SERVICIO CAMBIA
                 $('#servicio').change(function () {
-                    var servicio_id=$('#servicio').val();
+                    var servicio_id = $('#servicio').val();
                     //PIDIENDO JSON
-                    $.get("Tarea/obtenerUnidades/"+servicio_id, function (data, status) {
-                        alert("Data: " + data + "\nStatus: " + status);
+                    $.get("Tarea/obtenerUnidades/" + servicio_id, function (data, status) {
+                        datos = $.parseJSON(data);
+                        $.each(datos, function (i, item) {
+                            console.log(item);
+                        });
                     });
 
 
