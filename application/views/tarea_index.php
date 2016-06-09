@@ -97,6 +97,16 @@
                         });
                     });
                 });
+                $('#unidad').change(function () {
+                    $('#responsable').empty();
+                    var unidad_id = $('#unidad').val();
+                    $.get("Tarea/obtenerResponsables/" + unidad_id, function (data, status) {
+                        datos = $.parseJSON(data);
+                        $.each(datos, function (i, item) {
+                            $('#responsable').append('<option value='+item.responsable_id+'>'+item.nombre+'</option>');
+                        });
+                    });
+                });
             });
 
 
