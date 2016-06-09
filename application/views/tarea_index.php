@@ -86,19 +86,15 @@
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
         <script>
             $(document).ready(function () {
-                //CUANDO EL SERVICIO CAMBIA
                 $('#servicio').change(function () {
                     var servicio_id = $('#servicio').val();
-                    //PIDIENDO JSON
                     $.get("Tarea/obtenerUnidades/" + servicio_id, function (data, status) {
                         datos = $.parseJSON(data);
                         $.each(datos, function (i, item) {
-                            console.log(item);
+                            console.log(item.unidad_id);
+                            console.log(item.nombre);
                         });
                     });
-
-
-
                 });
             });
 
