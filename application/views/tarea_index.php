@@ -44,7 +44,8 @@
             <form>
                 <div class="form-group">
                     <label for="servicio">Servicios</label>
-                    <select class="form-control" id='servicio' >
+                    <select class="form-control" id='servicio'  >
+                        <option >-- Seleccionar Opcion --</option>
                         <?php foreach ($servicio as $servi) { ?>
                             <option value=<?php echo $servi->servicio_id; ?>><?php echo $servi->nombre; ?></option>
                         <?php } ?>
@@ -54,7 +55,7 @@
                 <div class="form-group">
                     <label for="unidad" id=''>Unidades</label>
                     <select class="form-control" id='unidad'>
-
+                           
                     </select>
                 </div>
                 <div class="form-group">
@@ -87,12 +88,12 @@
         <script>
             $(document).ready(function () {
                 $('#servicio').change(function () {
+                    $('#unidad').empty();
                     var servicio_id = $('#servicio').val();
                     $.get("Tarea/obtenerUnidades/" + servicio_id, function (data, status) {
                         datos = $.parseJSON(data);
                         $.each(datos, function (i, item) {
-                            console.log(item.unidad_id);
-                            console.log(item.nombre);
+                            $('#unidad').append('<option value='+item.unidad_id+'>'+item.nombre+'</option>');
                         });
                     });
                 });
