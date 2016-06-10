@@ -13,6 +13,7 @@
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/bootstrap.min.css"); ?>" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
     </head>
 
@@ -55,7 +56,7 @@
                 <div class="form-group">
                     <label for="unidad" id=''>Unidades</label>
                     <select class="form-control" id='unidad'>
-                           
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -85,25 +86,35 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
         <script>
             $(document).ready(function () {
+                $('select').select2({
+                    placeholder: 'Seleccionar Opcion'
+                });
+
                 $('#servicio').change(function () {
                     $('#unidad').empty();
+                    $('#responsable').empty();
+                    $('#unidad').append('<option>-- Seleccionar Opcion --</option>');
                     var servicio_id = $('#servicio').val();
                     $.get("Tarea/obtenerUnidades/" + servicio_id, function (data, status) {
                         datos = $.parseJSON(data);
                         $.each(datos, function (i, item) {
-                            $('#unidad').append('<option value='+item.unidad_id+'>'+item.nombre+'</option>');
+                            $('#unidad').append('<option value=' + item.unidad_id + '>' + item.nombre + '</option>');
                         });
+
                     });
                 });
                 $('#unidad').change(function () {
                     $('#responsable').empty();
+                    //$('#responsable').append('<option>-- Seleccionar Responsable --</option>');
                     var unidad_id = $('#unidad').val();
                     $.get("Tarea/obtenerResponsables/" + unidad_id, function (data, status) {
                         datos = $.parseJSON(data);
                         $.each(datos, function (i, item) {
-                            $('#responsable').append('<option value='+item.responsable_id+'>'+item.nombre+'</option>');
+                            $('#responsable').append('<option value=' + item.responsable_id + '>' + item.nombre + '</option>');
                         });
                     });
                 });
