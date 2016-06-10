@@ -14,6 +14,8 @@
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/bootstrap.min.css"); ?>" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css" rel="stylesheet" />
+
 
     </head>
 
@@ -72,6 +74,12 @@
                     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre Tarea">
                 </div>
 
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
 
 
                 <button type="submit" class="btn btn-default">Asignar Actividad</button>
@@ -87,6 +95,8 @@
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+
 
         <script>
             $(document).ready(function () {
